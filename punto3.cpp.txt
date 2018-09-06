@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int funcion (int p)
+{
+	int i,fizz,buzz,tab;
+	
+     for(i=1;i<=100;i++)
+    {
+    	fizz=i%3;
+    	buzz=i%5;
+    	tab=i%10;
+    	
+    	if(fizz==0)
+    	{
+    		cout << "Fizz ";
+		}
+		if(buzz==0)
+		{
+			cout << "Buzz ";
+		}
+		if(fizz==0 && buzz==0)
+		{
+			cout << "FizzBuzz ";
+		}
+		if(fizz!=0 && buzz!=0)
+		{
+			cout << i << " ";
+		}
+		if(tab==0)
+		{
+			cout << endl;
+		}
+		
+	}
+
+return 0;
+}
+
+int i,fizz,buzz,tab,p;
+
+int main() {
+	
+	cout << "Este es el famoso problema de fizz buzz del 1 al 100: "<<endl;
+	
+	p = funcion(0);
+   
+	return 0;
+}

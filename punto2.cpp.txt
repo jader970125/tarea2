@@ -1,0 +1,71 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int numeropar (int num)
+{
+	int desicion,i,sumatoria=0;
+	desicion = num%2;
+	
+	if(desicion == 1)
+	{
+		for(i=num-1;i>=0;i=i-2)
+		{
+			sumatoria=sumatoria+i;
+			
+		}
+	}	
+		else{
+		
+		for(i=num;i>=0;i=i-2)
+		{
+			sumatoria=sumatoria+i;
+			
+		}
+	}
+		
+	return sumatoria;
+	
+}
+
+int numeroimpar(int num)
+{
+	int desicion,i,sumatoria=0;
+	desicion = num%2;
+	
+	if(desicion == 1)
+	{
+		for(i=num;i>=1;i=i-2)
+		{
+			sumatoria=sumatoria+i;
+			
+		}
+	}	
+		else{
+		
+		for(i=num-1;i>=1;i=i-2)
+		{
+			sumatoria=sumatoria+i;
+			
+		}
+	}
+		
+	return sumatoria;
+}
+
+int num, sumapar,sumaimpar;
+
+int main() {
+	
+    
+	cout << "Ingrese un numero:  " << endl;
+	cin >> num;
+	sumapar = numeropar (num);
+	sumaimpar = numeroimpar(num);
+	cout << "La sumatoria de los numeros impares hasta "<< num <<" es: "<<sumaimpar<< " y la suma de los numeros impares es: "<< sumapar << endl;
+	
+	
+	
+	return 0;
+}

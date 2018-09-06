@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int funcion (int num)
+{
+	int i,j,k;
+	
+	for(j=0;j<num;j++)
+	{
+		for(i=0;i<=num-j;i++)
+		{
+			cout << " ";
+		}
+		
+		for(k=0;k<=j;k++)
+		{
+			cout << "*" ;
+		}
+		
+		cout << endl;
+	}
+	
+	return 0;
+}
+
+int num,f;
+
+int main() {
+	
+	cout << "Ingrese el numero de filas que quiere para la tringualo en su base: ";
+	cin >> num;
+	
+	f = funcion(num);
+    
+	return 0;
+}

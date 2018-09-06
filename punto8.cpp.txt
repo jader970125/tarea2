@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+float tiempovuelo (float a,float b)
+{
+	float tiempo,angulo;
+	angulo = a*0.01745333;
+	tiempo=(2*b*(sin (angulo))/(9.8));
+	return tiempo;
+}
+
+float maxaltura (float a, float b)
+{
+	float angulo, trigono, hmax;
+	angulo = 2*a*0.01745333;
+	trigono = 0.5 - (0.5 * cos(angulo));
+	hmax = (pow (b,2) * trigono)/(19.6);
+	return hmax;
+}
+
+float horizontal (float a, float b)
+{
+	float angulo, alp;
+	angulo = 2*a*0.01745333;
+	alp = (pow(b,2) * sin(angulo))/(9.8);
+	return alp;
+}
+
+
+int main() {
+	
+float angulo, vi, time, hmax, alp;
+
+cout << "Ingrese el angulo de salida del proyectil: \n";
+cin >> angulo;
+cout << "Digite la velocidad inicial del proyectil: \n";
+cin >> vi;
+
+time = tiempovuelo (angulo,vi);
+hmax = maxaltura (angulo,vi);
+alp = horizontal (angulo,vi);
+
+cout << "El tiempo de vuelvo del proyectil es: "<< time << endl;
+cout << "La altura maxima que alcanza el proyectil es: "<< hmax<< endl;
+cout << "El alcanze del proyectil es : "<< alp << endl;
+	return 0;
+}
